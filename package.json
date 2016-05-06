@@ -1,13 +1,14 @@
 {
   "name": "updater-notify",
   "main": "./lib/updater-notify",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Use to check periodic atom repository for check new versions is avaliable.",
   "keywords": [
-      "updater", "atom", "check"
+    "updater",
+    "atom",
+    "check"
   ],
   "activationCommands": {
-    "atom-workspace": "updater-notify:toggle",
     "atom-workspace": "updater-notify:manualCheck"
   },
   "repository": "https://github.com/rodrigopmatias/atom-updater-notify.git",
@@ -15,6 +16,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
