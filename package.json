@@ -10,7 +10,7 @@
     "atom-workspace": "updater-notify:toggle",
     "atom-workspace": "updater-notify:manualCheck"
   },
-  "repository": "https://github.com/rodrigomatias/atom-updater-notify",
+  "repository": "https://github.com/rodrigopmatias/atom-updater-notify.git",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
