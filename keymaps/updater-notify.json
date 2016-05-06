@@ -1,0 +1,6 @@
+{
+  "atom-workspace": {
+    "ctrl-alt-u": "updater-notify:toggle",
+    "ctrl-alt-g": "updater-notify:manualCheck"
+  }
+}
