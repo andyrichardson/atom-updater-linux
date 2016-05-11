@@ -1,13 +1,39 @@
 {
   "name": "updater-notify",
-  "main": "./lib/updater-notify",
-  "version": "0.1.2",
+  "main": "./lib/main",
+  "version": "0.1.3",
+  "author": "Rodrigo Pinheiro Matias",
   "description": "Use to check periodic atom repository for check new versions is avaliable.",
   "keywords": [
     "updater",
     "atom",
     "check"
   ],
+  "configSchema": {
+    "acceptTestVersion": {
+      "type": "boolean",
+      "default": false,
+      "title": "Accept test versions of atom.",
+      "description": "You can accept test versions of atom."
+    },
+    "checkInterval": {
+      "type": "integer",
+      "default": 1,
+      "title": "Check interval",
+      "description": "Interval to check new versions of atom in repository, in hours."
+    },
+    "pkgType": {
+      "type": "string",
+      "default": "Debian, Ubuntu",
+      "title": "Package type",
+      "enum": [
+        "Debian, Ubuntu",
+        "RedHat",
+        "Mac OSX"
+      ],
+      "description": "The type of package for download."
+    }
+  },
   "activationCommands": {
     "atom-workspace": "updater-notify:manualCheck"
   },
@@ -16,5 +42,6 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+  }
 }
