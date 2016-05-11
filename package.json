@@ -1,7 +1,7 @@
 {
   "name": "updater-notify",
   "main": "./lib/main",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Rodrigo Pinheiro Matias",
   "description": "Use to check periodic atom repository for check new versions is avaliable.",
   "keywords": [
