@@ -7,7 +7,10 @@
   "keywords": [
     "updater",
     "atom",
-    "check"
+    "check",
+    "release",
+    "auto",
+    "download"
   ],
   "configSchema": {
     "acceptTestVersion": {
