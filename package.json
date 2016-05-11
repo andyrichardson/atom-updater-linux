@@ -1,7 +1,7 @@
 {
   "name": "updater-notify",
   "main": "./lib/main",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "author": "Rodrigo Pinheiro Matias",
   "description": "Use to check periodic atom repository for check new versions is avaliable.",
   "keywords": [
@@ -39,10 +39,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {},
-  "apmInstallSource": {
-    "type": "git",
-    "source": "git@github.com:rodrigopmatias/atom-updater-notify.git",
-    "sha": "ad0e148501384fed433cbc4b8655952fae561266"
-  }
+  "dependencies": {}
 }
