@@ -1,7 +1,7 @@
 {
   "name": "updater-notify",
   "main": "./lib/main",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "author": "Rodrigo Pinheiro Matias",
   "description": "Use to check periodic atom repository for check new versions is avaliable.",
   "keywords": [
@@ -12,6 +12,13 @@
     "auto",
     "download"
   ],
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
   "configSchema": {
     "acceptTestVersion": {
       "type": "boolean",
