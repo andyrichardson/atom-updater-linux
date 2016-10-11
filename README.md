@@ -1,5 +1,21 @@
-# updater-notify package
+# Atom Update Notifier
 
-A short description of your package.
+Be automatically notified of updates to Atom on Linux and Mac systems.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+## Installation
+
+    apm install updater-notify
+
+## Configuration
+**Accept test versions:** Toggle between checking for stable and beta versions.
+
+**Check interval:** Set hourly interval between checks (default = 1).
+
+**Package Type:** Choose host OS for package link.
+
+## Manually check for updates
+
+
+**Windows/Linux** `CTRL + ALT + G`
+
+**Mac** `CMD + ALT + G`
