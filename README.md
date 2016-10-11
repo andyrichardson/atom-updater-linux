@@ -19,3 +19,9 @@ Be automatically notified of updates to Atom on Linux and Mac systems.
 **Windows/Linux:** `CTRL + ALT + G`
 
 **Mac:** `CMD + ALT + G`
+
+## Special thanks
+
+I am grateful for the contributions of:
+
+1. Andy Richardson (andyrichardson) https://andythedeveloper.com
