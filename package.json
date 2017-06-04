@@ -49,5 +49,9 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dom-listener": "^0.1.2",
+    "request": "^2.81.0",
+    "shelljs": "^0.7.7"
+  }
 }
