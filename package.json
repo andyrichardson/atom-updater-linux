@@ -1,15 +1,15 @@
 {
-  "name": "updater-notify",
+  "name": "atom-updater-linux",
   "main": "./lib/main",
-  "version": "0.5.5",
-  "author": "Rodrigo Pinheiro Matias",
-  "description": "Use to check periodic atom repository for check new versions is avaliable.",
+  "version": "0.0.1",
+  "author": "Andy Richardson - forked from Rodrigo Pinheiro Matias atom-updater-notify",
+  "description": "Used to check for updates to Atom and download and install them in linux.",
   "keywords": [
-    "updater",
+    "update",
     "atom",
-    "check",
-    "release",
-    "auto",
+    "updater",
+    "linux",
+    "fedora",
     "download"
   ],
   "consumedServices": {
@@ -44,7 +44,7 @@
       "description": "The type of package for download."
     }
   },
-  "repository": "https://github.com/rodrigopmatias/atom-updater-notify.git",
+  "repository": "https://github.com/andyrichardson/atom-updater-linux.git",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
