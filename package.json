@@ -1,7 +1,7 @@
 {
   "name": "atom-updater-linux",
   "main": "./lib/main",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Andy Richardson (forked from Rodrigo Pinheiro Matias atom-updater-notify)",
   "description": "Used to check for updates to Atom and download and install them in linux.",
   "keywords": [
