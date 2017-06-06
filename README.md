@@ -23,13 +23,11 @@ Use your package manager to install _zenity_ like so:
 
 **Check interval:** Set hourly interval between checks (default = 1).
 
-**Package Type:** Choose host OS for package link.
+**Package Type:** Choose package type (_.deb_ or _.rpm_).
 
 ## Manually check for updates
 
-**Windows/Linux:** `CTRL + ALT + G`
-
-**Mac:** `CMD + ALT + G`
+**Keyboard shortcut:** `CTRL + ALT + G`
 
 ## Special thanks
 

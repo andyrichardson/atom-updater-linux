@@ -10,6 +10,8 @@
     "updater",
     "linux",
     "fedora",
+    "ubuntu",
+    "debian",
     "download"
   ],
   "consumedServices": {
@@ -38,8 +40,7 @@
       "title": "Package type",
       "enum": [
         "Debian, Ubuntu",
-        "RedHat",
-        "Mac OSX"
+        "RedHat"
       ],
       "description": "The type of package for download."
     }
