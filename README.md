@@ -1,4 +1,4 @@
-# Atom Update Notifier
+# Atom Updater Linux
 
 Be automatically notified of updates to Atom on Linux and update in one click.
 
