@@ -1,8 +1,8 @@
 {
   "name": "atom-updater-linux",
-  "main": "./lib/main",
+  "main": "./index.js",
   "version": "0.1.4",
-  "author": "Andy Richardson (forked from Rodrigo Pinheiro Matias atom-updater-notify)",
+  "author": "Andy Richardson",
   "description": "Used to check for updates to Atom and download and install them in linux.",
   "keywords": [
     "update",
@@ -19,30 +19,6 @@
       "versions": {
         "^1.0.0": "consumeStatusBar"
       }
-    }
-  },
-  "configSchema": {
-    "acceptTestVersion": {
-      "type": "boolean",
-      "default": false,
-      "title": "Accept test versions of atom.",
-      "description": "You can accept test versions of atom."
-    },
-    "checkInterval": {
-      "type": "integer",
-      "default": 1,
-      "title": "Check interval",
-      "description": "Interval to check new versions of atom in repository, in hours."
-    },
-    "pkgType": {
-      "type": "string",
-      "default": "Debian, Ubuntu",
-      "title": "Package type",
-      "enum": [
-        "Debian, Ubuntu",
-        "RedHat"
-      ],
-      "description": "The type of package for download."
     }
   },
   "repository": "https://github.com/andyrichardson/atom-updater-linux.git",
