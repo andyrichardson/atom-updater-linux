@@ -1,6 +1,6 @@
 # Atom Updater Linux
 
-Be automatically notified of updates to Atom on Linux and update in one click.
+Be notified of updates to Atom and install without leaving the editor.
 
 ## Installation
 
@@ -19,16 +19,12 @@ Use your package manager to install _zenity_ like so:
     dnf install zenity
 
 ## Configuration
-**Accept test versions:** Toggle between checking for stable and beta versions.
+**Beta releases:** Toggle between checking for stable and beta versions.
 
-**Check interval:** Set hourly interval between checks (default = 1).
+**Check on startup:** Check for updates to Atom at launch.
 
-**Package Type:** Choose package type (_.deb_ or _.rpm_).
+**Package Type:** Choose package type (_Auto detect_, _.deb_ or _.rpm_).
 
 ## Manually check for updates
 
-**Keyboard shortcut:** `CTRL + ALT + G`
-
-## Special thanks
-
-This was made possible thanks to the open source [updater-notify](https://github.com/rodrigopmatias/atom-updater-notify) atom package created by Rodrigo Pinheiro Matias (rodrigopmatias).
+**Keyboard shortcut:** `ctrl + alt + u`
