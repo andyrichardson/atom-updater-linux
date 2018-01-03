@@ -1,9 +1,9 @@
 {
   "name": "atom-updater-linux",
   "main": "./index.js",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "author": "Andy Richardson",
-  "description": "Used to check for updates to Atom and download and install them in linux.",
+  "description": "Used to check for, download and install updates to Atom Editor in linux based distrobutions.",
   "keywords": [
     "update",
     "atom",
@@ -14,21 +14,12 @@
     "debian",
     "download"
   ],
-  "consumedServices": {
-    "status-bar": {
-      "versions": {
-        "^1.0.0": "consumeStatusBar"
-      }
-    }
-  },
   "repository": "https://github.com/andyrichardson/atom-updater-linux.git",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "dom-listener": "^0.1.2",
-    "request": "^2.81.0",
-    "shelljs": "^0.7.7"
+    "request": "^2.81.0"
   }
 }
