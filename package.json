@@ -1,7 +1,7 @@
 {
   "name": "atom-updater-linux",
   "main": "./index.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Andy Richardson",
   "description": "Used to check for, download and install updates to Atom Editor in linux based distrobutions.",
   "keywords": [
