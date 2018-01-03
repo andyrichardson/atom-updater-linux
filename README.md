@@ -8,15 +8,7 @@ Be notified of updates to Atom and install without leaving the editor.
 
 ## Dependencies
  * RPM / DPKG based Linux distribution
- * zenity  
-
-Use your package manager to install _zenity_ like so:
-
-    # Ubuntu
-    apt install zenity
-
-    # Fedora
-    dnf install zenity
+ * pkexec
 
 ## Configuration
 **Beta releases:** Toggle between checking for stable and beta versions.
