@@ -1,16 +1,11 @@
 {
   "menu": [
     {
-      "label": "Packages",
+      "label": "Help",
       "submenu": [
         {
-          "label": "Atom Updater Linux",
-          "submenu": [
-            {
-              "label": "Check for updates",
-              "command": "atom-updater-linux:check"
-            }
-          ]
+          "label": "Check for updates",
+          "command": "atom-updater-linux:check"
         }
       ]
     }
