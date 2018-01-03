@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-alt-g": "atom-updater-linux:manualCheck"
+    "ctrl-alt-u": "atom-updater-linux:check"
   }
 }
