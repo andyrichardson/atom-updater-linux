@@ -1,5 +1,8 @@
 {
   "name": "atom-updater-linux",
+  "scripts": {
+    "lint": "eslint ."
+  },
   "main": "./index.js",
   "version": "1.0.1",
   "author": "Andy Richardson",
@@ -21,5 +24,10 @@
   },
   "dependencies": {
     "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
   }
 }

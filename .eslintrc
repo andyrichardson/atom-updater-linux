@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "class-methods-use-this": "off",
+    "no-underscore-dangle": "off",
+    "function-paren-newline": "off"
+  },
+  "globals": {
+    "atom": true
+  },
+  "settings": {
+    "import/core-modules": [ "atom" ],
+  }
+}
