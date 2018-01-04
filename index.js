@@ -3,9 +3,9 @@
 import Settings from './lib/settings';
 import Package from './lib/package';
 
-const package = new Package();
+const pkg = new Package();
 
 export default {
   config: Settings.config,
-  activate: () => package.activate()
-}
+  activate: () => pkg.activate(),
+};
