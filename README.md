@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/andyrichardson/atom-updater-linux/tree/master.svg?style=shield)](https://circleci.com/gh/andyrichardson/atom-updater-linux/tree/master)
 # Atom Updater Linux
 
 Be notified of updates to Atom and install without leaving the editor.
