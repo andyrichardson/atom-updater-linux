@@ -21,4 +21,12 @@ Be notified of updates to Atom and install without leaving the editor.
 
 ## Manually check for updates
 
-**Keyboard shortcut:** `ctrl + alt + u`
+#### **Keyboard shortcut**
+
+`ctrl + alt + u`
+
+#### **Atom menu**
+
+`Help -> Check for updates`
+
+<img src="https://i.imgur.com/H1itbnm.gif" width="700px"/>
