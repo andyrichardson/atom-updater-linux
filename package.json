@@ -4,7 +4,7 @@
     "lint": "eslint ."
   },
   "main": "./index.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Andy Richardson",
   "description": "Used to check for, download and install updates to Atom Editor in linux based distrobutions.",
   "keywords": [
