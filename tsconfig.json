@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "paths": {
+      "typings": ["./typings/index.ts"]
+    },
+    "preserveConstEnums": true,
+    "strict": true,
+    "target": "es2015"
+  }
+}
