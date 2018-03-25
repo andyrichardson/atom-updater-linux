@@ -185,8 +185,29 @@ export class Updater {
       throw Error('Versions have not been fetched');
     }
 
-    const current = atom.getVersion();
-    const latest = this.versions[this.releaseChannel].substring(1);
-    return current < latest;
+    const current = atom.getVersion().split('.');
+    const latest = this.versions[this.releaseChannel].substring(1).split('.');
+
+    let result = false;
+
+    // compare versions from format xx.xx.xx
+    latest.some(
+      (num: string, index: number) => {
+        const latestNum = parseInt(num);
+        const currentNum = parseInt(current[index]);
+
+        if (latestNum === currentNum) {
+          return false;
+        }
+
+        if (parseInt(num) > parseInt(current[index])) {
+          result = true;
+        }
+
+        return true;
+      },
+    );
+
+    return result;
   }
 }

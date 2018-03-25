@@ -5,6 +5,7 @@
     ],
     "rules": {
       "interface-name": [false],
-      "quotemark": [true, "single"]
+      "quotemark": [true, "single"],
+      "radix": [false]
     }
 }
