@@ -27,7 +27,7 @@ export const downloadComplete = (installClick: () => any) => {
   notification = atom.notifications.addSuccess('Download complete', opts);
 };
 
-export const downloadFailed = (err: string) => {
+export const downloadFailed = (err?: string) => {
   const opts = {
     detail: 'Something went wrong when attempting to download the latest version of Atom.',
     dismissable: true,
