@@ -1,8 +1,9 @@
 {
   "name": "atom-updater-linux",
   "scripts": {
+    "lint": "eslint .",
     "postinstall": "tsc",
-    "lint": "eslint ."
+    "test": "jest"
   },
   "main": "./src/index.js",
   "version": "1.0.6",
