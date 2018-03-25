@@ -1,5 +1,5 @@
+import Settings from './config/settings';
 import Package from './lib/package';
-import Settings from './lib/settings';
 
 console.log('loaded');
 const pkg = new Package();

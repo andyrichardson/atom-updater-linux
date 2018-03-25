@@ -1,5 +1,5 @@
 import { AtomEnvironment, CompositeDisposable } from 'atom';
-import Updater from './update';
+import { Updater } from './updater';
 
 declare const atom: AtomEnvironment;
 

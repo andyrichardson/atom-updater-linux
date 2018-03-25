@@ -10,7 +10,7 @@ interface PackageConfig {
   installCmd: InstallCommands;
 }
 
-const Config: PackageConfig = {
+export const Config: PackageConfig = {
   downloadBase: 'https://github.com/atom/atom/releases/download/',
   downloadFile: '/tmp/atom-updater-linux.installer',
   installCmd: {
@@ -18,5 +18,3 @@ const Config: PackageConfig = {
     rpm: 'rpm -U',
   },
 };
-
-export default Config;

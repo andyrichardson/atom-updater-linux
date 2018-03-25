@@ -2,25 +2,23 @@ import { exec } from 'child_process';
 import { Promise } from 'es6-promise';
 import * as fs from 'fs';
 import * as request from 'request';
+import { Config } from '../config';
 import { PackageType, ReleaseType } from '../typings';
-import Config from './config';
-import Notifier from './notifier';
+import * as Notifier from './notifier';
 
 interface ReleaseVersions {
   beta: string;
   stable: string;
 }
 
-export default class Updater {
+export class Updater {
   public checkStartup: boolean;
-  public notifier: Notifier;
   public packageType: string;
   public releaseChannel: ReleaseType;
   public versions: ReleaseVersions | null;
 
   constructor() {
     this.checkStartup = atom.config.get('atom-updater-linux.checkStartup');
-    this.notifier = new Notifier(this);
     this.packageType = atom.config.get('atom-updater-linux.packageType');
     this.releaseChannel = (atom.config.get('atom-updater-linux.useBeta')) ? ReleaseType.Beta : ReleaseType.Stable;
     this.versions = null;
@@ -42,23 +40,23 @@ export default class Updater {
     return this.getLatestVersionNum()
       .then(() => {
         if (this.requiresUpdate() && this.versions !== null) {
-          this.notifier.updateAvailable(this.versions[this.releaseChannel]);
+          Notifier.updateAvailable(this.versions[this.releaseChannel], () => this.download());
           return true;
         }
 
         if (notifIfFalse) {
-          this.notifier.updateNotAvailable();
+          Notifier.updateNotAvailable();
         }
 
         return false;
       })
-      .catch((err: string) => this.notifier.updateCheckFailed(err));
+      .catch((err: string) => Notifier.updateCheckFailed(err));
   }
 
   public download(): Promise<void> {
     return this.downloadUpdate()
-      .then(() => this.notifier.downloadComplete())
-      .catch((err: any) => this.notifier.downloadFailed(err));
+      .then(() => Notifier.downloadComplete(() => this.install()))
+      .catch((err: any) => Notifier.downloadFailed(err));
   }
 
   public install(): void {
@@ -68,10 +66,10 @@ export default class Updater {
       this.deletePackage();
 
       if (err) {
-        return this.notifier.installFailed(err.toString());
+        return Notifier.installFailed(err.toString());
       }
 
-      return this.notifier.installComplete();
+      return Notifier.installComplete();
     });
   }
 
@@ -106,7 +104,7 @@ export default class Updater {
   }
 
   public downloadUpdate(): Promise<void> {
-    this.notifier.downloadStarted();
+    Notifier.downloadStarted();
 
     return new Promise((resolve, reject) => {
       try {
