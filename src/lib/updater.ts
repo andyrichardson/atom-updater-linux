@@ -1,3 +1,4 @@
+import { NotificationOptions } from 'atom';
 import { exec } from 'child_process';
 import { Promise } from 'es6-promise';
 import * as fs from 'fs';
@@ -50,7 +51,7 @@ export class Updater {
 
         return false;
       })
-      .catch((err: string) => Notifier.updateCheckFailed(err));
+      .catch((err: any) => Notifier.updateCheckFailed(err.message, err.args));
   }
 
   public download(): Promise<void> {
@@ -153,13 +154,14 @@ export class Updater {
             return false;
           });
         } catch (err) {
-          let message = 'Checking for updates failed.';
+          const message = 'Checking for updates failed.';
+          const args: NotificationOptions = {};
 
           if (response.message.indexOf('limit exceeded') !== -1) {
-            message = `${message} You have exceeded the API limit for your IP.`;
+            args.detail = `You have exceeded the API limit for your IP.`;
           }
 
-          return reject(err);
+          return reject({ message, args });
         }
 
         this.versions = result;

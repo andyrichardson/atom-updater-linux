@@ -98,6 +98,6 @@ export const updateAvailable = (version: string, downloadClick: () => any) => {
   notification = atom.notifications.addInfo('Update available', opts);
 };
 
-export const updateCheckFailed = (msg: string) => {
-  atom.notifications.addError(msg);
+export const updateCheckFailed = (msg: string, args?: NotificationOptions) => {
+  atom.notifications.addError(msg, args);
 };
