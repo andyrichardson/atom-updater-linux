@@ -1,7 +1,7 @@
 {
   "name": "atom-updater-linux",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "tslint --project .",
     "postinstall": "tsc",
     "test": "jest"
   },
