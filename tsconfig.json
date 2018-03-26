@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "paths": {
+      "typings": ["./typings/index.ts"]
+    },
+    "preserveConstEnums": true,
+    "strict": true,
+    "target": "ES3"
+  },
+  "include": [
+    "./src/*.ts",
+    "./src/**/*.ts"
+  ]
+}
