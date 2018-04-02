@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import Package from '../../src/lib/package';
 
 it('should construct', () => {
-  expect(new Package()).to.not.throw();
+  expect(new Package()).to.be.an('object');
 });
 
 let pkg;
