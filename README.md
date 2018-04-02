@@ -1,5 +1,21 @@
-[![CircleCI](https://circleci.com/gh/andyrichardson/atom-updater-linux/tree/master.svg?style=shield)](https://circleci.com/gh/andyrichardson/atom-updater-linux/tree/master) 
-[![TravisCI](https://travis-ci.org/andyrichardson/atom-updater-linux.svg?branch=master)](https://travis-ci.org/andyrichardson/atom-updater-linux)
+<p align="center">
+  <a href="https://circleci.com/gh/andyrichardson/atom-updater-linux/tree/master">
+    <img src="https://circleci.com/gh/andyrichardson/atom-updater-linux/tree/master.svg?style=shield"/>
+  </a>
+  <a href="https://travis-ci.org/andyrichardson/atom-updater-linux">
+    <img src="https://travis-ci.org/andyrichardson/atom-updater-linux.svg?branch=master"/>
+  </a>
+  <a href="https://atom.io/packages/atom-updater-linux">
+    <img src="https://img.shields.io/apm/v/atom-updater-linux.svg"/>
+  </a>
+  <a href="https://github.com/andyrichardson/atom-updater-linux/commits/master">
+    <img src="https://img.shields.io/github/commits-since/andyrichardson/atom-updater-linux/latest.svg"/>
+  </a>
+  <a href="https://atom.io/packages/atom-updater-linux">
+    <img src="https://img.shields.io/apm/dm/atom-updater-linux.svg"/>
+  </a>
+</p>
+
 # Atom Updater Linux
 
 Be notified of updates to Atom and install without leaving the editor.
