@@ -1,4 +1,3 @@
-// jest.mock('request', () => ({ get: () => jest.fn()) }));
 import { expect } from 'chai';
 import { Updater } from '../../src/lib/updater';
 

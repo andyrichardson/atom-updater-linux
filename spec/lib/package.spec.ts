@@ -1,4 +1,3 @@
-// jest.mock('atom', () => ({ AtomEnvironment: '', CompositeDisposable: ''}))
 import { expect } from 'chai';
 import Package from '../../src/lib/package';
 

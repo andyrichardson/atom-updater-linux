@@ -52,15 +52,15 @@ describe('download complete', () => {
     expect(buttons[0].text.toLowerCase()).to.have.string('install');
   });
 
-  // it('should call install function on click', () => {
-  //   const installSpy = jest.fn();
-  //   const spy = jest.spyOn(global.atom.notifications, 'addSuccess');
-  //   Notifier.downloadComplete(() => console.log('done'));
-  //
-  //   const buttons = spy.mock.calls[0][1].buttons;
-  //   buttons[0].onDidClick();
-  //   expect(installSpy.mock.calls.length).to.equal(1);
-  // });
+  it('should call install function on click', () => {
+    const installSpy = jest.fn();
+    const spy = jest.spyOn(global.atom.notifications, 'addSuccess');
+    Notifier.downloadComplete(installSpy);
+
+    const buttons = spy.mock.calls[0][1].buttons;
+    buttons[0].onDidClick();
+    expect(installSpy.mock.calls.length).to.equal(1);
+  });
 });
 
 describe('download failed', () => {
@@ -97,14 +97,4 @@ describe('download failed', () => {
     const errStack = spy.mock.calls[0][1].stack;
     expect(errStack).to.equal(errString);
   });
-
-  // it('should call install function on click', () => {
-  //   const installSpy = jest.fn();
-  //   const spy = jest.spyOn(global.atom.notifications, 'addError');
-  //   Notifier.downloadFailed(() => console.log('done'));
-  //
-  //   const buttons = spy.mock.calls[0][1].buttons;
-  //   buttons[0].onDidClick();
-  //   expect(installSpy.mock.calls.length).to.equal(1);
-  // });
 });
