@@ -3,9 +3,13 @@
   "scripts": {
     "build": "tsc",
     "lint": "tslint --project .",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "npm run lint && npm run test && npm run build"
   },
   "main": "./src/index.js",
+  "files": [
+    "src"
+  ],
   "version": "1.1.2",
   "author": "Andy Richardson",
   "description": "Used to check for, download and install updates to Atom Editor in linux based distributions.",
