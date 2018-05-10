@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "lib": ["es6", "dom"],
     "module": "commonjs",
     "paths": {
       "typings": ["./typings/index.ts"]
@@ -9,8 +10,5 @@
     "strict": true,
     "target": "ES3"
   },
-  "include": [
-    "./src/*.ts",
-    "./src/**/*.ts"
-  ]
+  "include": ["./src/*.ts", "./src/**/*.ts"]
 }
