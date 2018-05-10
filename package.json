@@ -1,11 +1,15 @@
 {
   "name": "atom-updater-linux",
   "scripts": {
+    "build": "tsc",
     "lint": "tslint --project .",
-    "postinstall": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
   "main": "./src/index.js",
+  "files": [
+    "src"
+  ],
   "version": "1.1.2",
   "author": "Andy Richardson",
   "description": "Used to check for, download and install updates to Atom Editor in linux based distributions.",
@@ -25,24 +29,10 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "@types/atom": "^1.25.0",
-    "@types/chai": "^4.1.2",
-    "@types/es6-promise": "^3.3.0",
-    "@types/event-kit": "^2.4.0",
-    "@types/jest": "^22.2.0",
-    "@types/request": "^2.47.0",
-    "chai": "^4.1.2",
     "dom-listener": "^0.1.2",
-    "eslint": "^4.14.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
     "event-kit": "^2.4.0",
     "fs": "0.0.1-security",
-    "jest": "^22.4.2",
-    "request": "^2.81.0",
-    "ts-jest": "^22.4.1",
-    "tslint": "^5.9.1",
-    "typescript": "^2.7.2"
+    "request": "^2.81.0"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -54,5 +44,18 @@
       "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "/spec/.*\\.spec.(ts|tsx|js)$"
+  },
+  "devDependencies": {
+    "@types/atom": "^1.26.0",
+    "@types/chai": "^4.1.2",
+    "@types/es6-promise": "^3.3.0",
+    "@types/event-kit": "^2.4.0",
+    "@types/jest": "^22.2.0",
+    "@types/request": "^2.47.0",
+    "chai": "^4.1.2",
+    "jest": "^22.4.2",
+    "ts-jest": "^22.4.1",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
   }
 }
