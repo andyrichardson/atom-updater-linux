@@ -1,8 +1,8 @@
 {
   "name": "atom-updater-linux",
   "scripts": {
+    "build": "tsc",
     "lint": "tslint --project .",
-    "postinstall": "tsc",
     "test": "jest"
   },
   "main": "./src/index.js",
