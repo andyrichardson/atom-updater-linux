@@ -1,6 +1,5 @@
 import { NotificationOptions } from 'atom';
 import { exec } from 'child_process';
-import { Promise } from 'es6-promise';
 import * as fs from 'fs';
 import * as request from 'request';
 import { Config } from '../config';
