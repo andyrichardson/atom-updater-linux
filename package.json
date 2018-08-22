@@ -54,8 +54,11 @@
     "@types/request": "^2.47.0",
     "chai": "^4.1.2",
     "jest": "^23.5.0",
+    "prettier": "^1.14.2",
+    "prettier-check": "^2.0.0",
     "ts-jest": "^23.1.4",
     "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.15.0",
     "typescript": "^3.0.1"
   }
 }
