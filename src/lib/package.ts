@@ -23,7 +23,7 @@ export default class Package {
     this.subscriptions.add(
       // @ts-ignore: Invalid argument type
       atom.commands.add('atom-workspace', {
-        'atom-updater-linux:check': () => this.updater.checkForUpdate(true),
+        'atom-updater-linux:check': () => this.updater!.checkForUpdate(true),
       })
     );
   }
