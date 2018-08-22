@@ -4,7 +4,7 @@
     "build": "tsc",
     "lint": "tslint --project .",
     "test": "jest",
-    "formatting": "prettier-check * **/*",
+    "formatting": "prettier-check `find * -name \"*.*\" -not -path \"*.js\"`",
     "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
   "main": "./src/index.js",
