@@ -32,7 +32,8 @@ const Settings = {
     },
     useBeta: {
       default: false,
-      description: 'Search for and update to the latest Beta version (default: false).',
+      description:
+        'Search for and update to the latest Beta version (default: false).',
       order: 1,
       title: 'Beta releases',
       type: 'boolean',

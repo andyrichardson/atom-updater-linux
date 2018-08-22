@@ -20,7 +20,8 @@ export const downloadComplete = (installClick: () => any) => {
         text: 'Install update',
       },
     ],
-    detail: 'A new version of Atom has been downloaded. Click below to install.',
+    detail:
+      'A new version of Atom has been downloaded. Click below to install.',
     dismissable: true,
   };
 
@@ -29,7 +30,8 @@ export const downloadComplete = (installClick: () => any) => {
 
 export const downloadFailed = (err?: string) => {
   const opts = {
-    detail: 'Something went wrong when attempting to download the latest version of Atom.',
+    detail:
+      'Something went wrong when attempting to download the latest version of Atom.',
     dismissable: true,
     stack: err,
   };
@@ -39,7 +41,8 @@ export const downloadFailed = (err?: string) => {
 
 export const exceededApiLimit = () => {
   const opts = {
-    detail: 'Unable to check for newer versions on Atom. Your API limit has been exceeded.',
+    detail:
+      'Unable to check for newer versions on Atom. Your API limit has been exceeded.',
     dismissable: true,
   };
 
