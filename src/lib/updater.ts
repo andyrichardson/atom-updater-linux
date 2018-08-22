@@ -98,8 +98,8 @@ export class Updater {
   }
 
   public detectVersion(): void {
-    exec('whereis rpm', (err, stdout) => {
-      if (stdout.indexOf('bin') !== -1) {
+    exec('cat /etc/redhat-release', (err, stdout) => {
+      if (err === null) {
         this.packageType = PackageType.RedHat;
       } else {
         this.packageType = PackageType.Debian;
