@@ -25,10 +25,12 @@ Be notified of updates to Atom and install without leaving the editor.
     apm install atom-updater-linux
 
 ## Dependencies
- * RPM / DPKG based Linux distribution
- * pkexec
+
+- RPM / DPKG based Linux distribution
+- pkexec
 
 ## Configuration
+
 **Beta releases:** Toggle between checking for stable and beta versions.
 
 **Check on startup:** Check for updates to Atom at launch.

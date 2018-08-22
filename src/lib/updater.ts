@@ -20,7 +20,9 @@ export class Updater {
   constructor() {
     this.checkStartup = atom.config.get('atom-updater-linux.checkStartup');
     this.packageType = atom.config.get('atom-updater-linux.packageType');
-    this.releaseChannel = (atom.config.get('atom-updater-linux.useBeta')) ? ReleaseType.Beta : ReleaseType.Stable;
+    this.releaseChannel = atom.config.get('atom-updater-linux.useBeta')
+      ? ReleaseType.Beta
+      : ReleaseType.Stable;
     this.versions = null;
 
     this.configWatcher();
@@ -40,7 +42,9 @@ export class Updater {
     return this.getLatestVersionNum()
       .then(() => {
         if (this.requiresUpdate() && this.versions !== null) {
-          Notifier.updateAvailable(this.versions[this.releaseChannel], () => this.download());
+          Notifier.updateAvailable(this.versions[this.releaseChannel], () =>
+            this.download()
+          );
           return true;
         }
 
@@ -60,9 +64,11 @@ export class Updater {
   }
 
   public install(): void {
-    const cmd = `SHELL=/bin/bash pkexec ${Config.installCmd[this.packageType]} ${Config.downloadFile}`;
+    const cmd = `SHELL=/bin/bash pkexec ${
+      Config.installCmd[this.packageType]
+    } ${Config.downloadFile}`;
 
-    exec(cmd, (err) => {
+    exec(cmd, err => {
       this.deletePackage();
 
       if (err) {
@@ -74,7 +80,7 @@ export class Updater {
   }
 
   public configWatcher(): void {
-    atom.config.observe('atom-updater-linux.packageType', (val) => {
+    atom.config.observe('atom-updater-linux.packageType', val => {
       this.packageType = val;
 
       if (this.packageType === PackageType.AutoDetect) {
@@ -82,8 +88,8 @@ export class Updater {
       }
     });
 
-    atom.config.observe('atom-updater-linux.useBeta', (val) => {
-      this.releaseChannel = (val) ? ReleaseType.Beta : ReleaseType.Stable;
+    atom.config.observe('atom-updater-linux.useBeta', val => {
+      this.releaseChannel = val ? ReleaseType.Beta : ReleaseType.Stable;
     });
   }
 
@@ -127,45 +133,49 @@ export class Updater {
     };
 
     return new Promise((resolve: any, reject: any) =>
-      request.get('https://api.github.com/repos/atom/atom/releases', opts, (err, data) => {
-        if (err !== null) {
-          return reject(err);
-        }
-
-        const response = JSON.parse(data.body);
-        const result: ReleaseVersions = {
-          beta: '',
-          stable: '',
-        };
-
-        try {
-          response.some((release: any) => {
-            if (result.beta !== '' && result.stable !== '') {
-              return true;
-            }
-
-            if (result.stable === '' && !release.prerelease) {
-              result.stable = release.tag_name;
-            } else if (result.beta === '' && release.prerelease) {
-              result.beta = release.tag_name;
-            }
-
-            return false;
-          });
-        } catch (err) {
-          const message = 'Checking for updates failed.';
-          const args: NotificationOptions = {};
-
-          if (response.message.indexOf('limit exceeded') !== -1) {
-            args.detail = `You have exceeded the API limit for your IP.`;
+      request.get(
+        'https://api.github.com/repos/atom/atom/releases',
+        opts,
+        (err, data) => {
+          if (err !== null) {
+            return reject(err);
           }
 
-          return reject({ message, args });
-        }
+          const response = JSON.parse(data.body);
+          const result: ReleaseVersions = {
+            beta: '',
+            stable: '',
+          };
 
-        this.versions = result;
-        return resolve(result);
-      }),
+          try {
+            response.some((release: any) => {
+              if (result.beta !== '' && result.stable !== '') {
+                return true;
+              }
+
+              if (result.stable === '' && !release.prerelease) {
+                result.stable = release.tag_name;
+              } else if (result.beta === '' && release.prerelease) {
+                result.beta = release.tag_name;
+              }
+
+              return false;
+            });
+          } catch (err) {
+            const message = 'Checking for updates failed.';
+            const args: NotificationOptions = {};
+
+            if (response.message.indexOf('limit exceeded') !== -1) {
+              args.detail = `You have exceeded the API limit for your IP.`;
+            }
+
+            return reject({ message, args });
+          }
+
+          this.versions = result;
+          return resolve(result);
+        }
+      )
     );
   }
 
@@ -176,7 +186,8 @@ export class Updater {
 
     const base = Config.downloadBase;
     const version = this.versions[this.releaseChannel];
-    const extension = (this.packageType === PackageType.Debian) ? '-amd64.deb' : '.x86_64.rpm';
+    const extension =
+      this.packageType === PackageType.Debian ? '-amd64.deb' : '.x86_64.rpm';
 
     return `${base}/${version}/atom${extension}`;
   }
@@ -192,22 +203,20 @@ export class Updater {
     let result = false;
 
     // compare versions from format xx.xx.xx
-    latest.some(
-      (num: string, index: number) => {
-        const latestNum = parseInt(num);
-        const currentNum = parseInt(current[index]);
+    latest.some((num: string, index: number) => {
+      const latestNum = parseInt(num);
+      const currentNum = parseInt(current[index]);
 
-        if (latestNum === currentNum) {
-          return false;
-        }
+      if (latestNum === currentNum) {
+        return false;
+      }
 
-        if (parseInt(num) > parseInt(current[index])) {
-          result = true;
-        }
+      if (parseInt(num) > parseInt(current[index])) {
+        result = true;
+      }
 
-        return true;
-      },
-    );
+      return true;
+    });
 
     return result;
   }
