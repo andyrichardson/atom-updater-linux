@@ -1,3 +1,7 @@
+> **Deprecation notice:** As of December 2017, Atom provides official repositories for all major Linux distributions [[source](https://github.com/atom/atom/issues/2956)]. You can find the latest installation instructions [here](https://flight-manual.atom.io/getting-started/sections/installing-atom/#installing-atom-on-linux).
+
+<br>
+
 <p align="center">
   <a href="https://circleci.com/gh/andyrichardson/atom-updater-linux/tree/master">
     <img src="https://circleci.com/gh/andyrichardson/atom-updater-linux/tree/master.svg?style=shield"/>
@@ -13,6 +17,9 @@
   </a>
   <a href="https://atom.io/packages/atom-updater-linux">
     <img src="https://img.shields.io/apm/dm/atom-updater-linux.svg"/>
+  </a>
+  <a href="https://github.com/atom/atom/issues/2956">
+    <img src="https://img.shields.io/badge/deprecated-Dec%202017-%23d66049.svg"/>
   </a>
 </p>
 
