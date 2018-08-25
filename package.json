@@ -35,17 +35,6 @@
     "fs": "0.0.1-security",
     "request": "^2.81.0"
   },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "\\.(ts|tsx)$": "ts-jest"
-    },
-    "testRegex": "/spec/.*\\.spec.(ts|tsx|js)$"
-  },
   "devDependencies": {
     "@types/atom": "^1.26.0",
     "@types/chai": "^4.1.2",
