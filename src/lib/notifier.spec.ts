@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import * as Notifier from '../../src/lib/notifier';
+import * as Notifier from './notifier';
 
 declare const global: any;
 

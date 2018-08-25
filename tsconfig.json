@@ -10,5 +10,6 @@
     "strict": true,
     "target": "ES3"
   },
-  "include": ["./src/*.ts", "./src/**/*.ts"]
+  "include": ["./src/*.ts", "./src/**/*.ts"],
+  "exclude": ["./src/*.spec.ts", "./src/**/*.spec.ts"]
 }

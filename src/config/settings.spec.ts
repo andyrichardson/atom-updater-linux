@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import Settings from '../../src/config/settings';
+import Settings from './settings';
 
 it('should export an object', () => {
   expect(Settings).to.be.an('object');

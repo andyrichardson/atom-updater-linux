@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import Package from '../../src/lib/package';
+import Package from './package';
 
 it('should construct', () => {
   expect(new Package()).to.be.an('object');
