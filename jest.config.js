@@ -3,5 +3,5 @@ module.exports = {
   transform: {
     '\\.(ts|tsx)$': 'ts-jest',
   },
-  testRegex: '/spec/.*\\.spec.(ts|tsx|js)$',
+  testRegex: '/src/.*\\.spec.(ts|tsx|js)$',
 };

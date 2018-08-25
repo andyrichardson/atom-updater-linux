@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { Updater } from '../../src/lib/updater';
+import { Updater } from './updater';
 
 declare const global: any;
 
