@@ -1,3 +1,6 @@
+> **Warning**
+> Due to the unfortunate sunsetting of Atom editor [[see here](https://github.blog/2022-06-08-sunsetting-atom/)] this project is moving to an archived state. Thanks to everyone who used and contributed to this project over the years ♥
+
 > **Deprecation notice:** As of December 2017, Atom provides official repositories for all major Linux distributions [[source](https://github.com/atom/atom/issues/2956)]. You can find the latest installation instructions [here](https://flight-manual.atom.io/getting-started/sections/installing-atom/#installing-atom-on-linux).
 
 <br>
